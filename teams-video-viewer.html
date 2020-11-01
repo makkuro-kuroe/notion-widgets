@@ -22,11 +22,12 @@
     document.addEventListener('DOMContentLoaded', function(event) {
           	const url = new URLSearchParams(window.location.search);
           	const video = url.has('video') ? url.get('video') : '';
+            const startTime = url.has('st') ? `&st=url.get('st')` : ''
           	document
           	.getElementById("frame-container")
           	.setAttribute(
           		'src',
-          		`https://web.microsoftstream.com/embed/video/${video}?autoplay=false&showinfo=true `
+          		`https://web.microsoftstream.com/embed/video/${video}?autoplay=false&showinfo=true${startTime}`
           		);
     				}
     			);
