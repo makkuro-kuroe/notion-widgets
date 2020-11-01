@@ -22,7 +22,7 @@
     document.addEventListener('DOMContentLoaded', function(event) {
           	const url = new URLSearchParams(window.location.search);
           	const video = url.has('video') ? url.get('video') : '';
-            const startTime = url.has('st') ? `&st=url.get('st')` : ''
+            const startTime = url.has('st') ? `&st=${url.get('st')}` : ''
           	document
           	.getElementById("frame-container")
           	.setAttribute(
